@@ -4,7 +4,7 @@ defmodule Cell do
     create_uid(cell.row, cell.col)
   end
   def create_uid(row, col) do
-    row * 10 + col
+    :crypto.hash(:md5, to_string(row) <> ":" <> to_string(col))
   end
   
   def create(row, col) do
@@ -32,5 +32,13 @@ defmodule Cell do
   
   def linked?(cell1, cell2) do
     Enum.member?(cell1.links, cell2.uid) && Enum.member?(cell2.links, cell1.uid)
+  end
+  
+  def linked_to_uid?(cell, uid) do
+    Enum.member?(cell.links, uid)
+  end
+  
+  def get_neighbours(cell) do
+    Enum.filter([cell.north, cell.east, cell.south, cell.west], fn(n) -> n != nil end)
   end
 end
