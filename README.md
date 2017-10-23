@@ -1,6 +1,6 @@
-# Maze
+# Elixir-Maze
 
-**TODO: Add description**
+Elixir Playground following the book "Mazes for Programmers" by Jamis Buck: https://pragprog.com/book/jbmaze/mazes-for-programmers
 
 ## Installation
 
@@ -16,4 +16,3 @@ end
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/maze](https://hexdocs.pm/maze).
-
